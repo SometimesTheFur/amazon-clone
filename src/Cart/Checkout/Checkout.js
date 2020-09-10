@@ -16,16 +16,15 @@ function Checkout() {
                     <h2 className='checkout__title'>
                         Your Shopping Cart
                     </h2>
-                    {/* BasketItem */}
-                    {/* BasketItem */}
-                    {/* BasketItem */}
-                    {/* BasketItem */}
-                    {/* BasketItem */}
+                    {/* CartItem */}
+                    {/* CartItem */}
+                    {/* CartItem */}
+                    {/* CartItem */}
+                    {/* CartItem */}
                 </div>
             </div>
                
                 <div className='checkout__right'>
-                    <h2>Subtotal goes here</h2>
                     <Subtotal />
                 </div>
             
