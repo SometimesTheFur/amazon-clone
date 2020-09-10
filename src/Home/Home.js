@@ -28,12 +28,11 @@ function Home() {
                 <div className='home__row'>
                     <Product
                         id="0AEg3" 
-                        title="Amazon Echo (3rd Generation) | Smart Speaker with 'Alexa', Charcoal Grey" 
+                        title="Amazon Echo (3rd Generation) | Smart Speaker with 'Alexa', Charcoal Fabric" 
                         price={98.99} 
                         image="https://images-na.ssl-images-amazon.com/images/I/6182S7MYC2L._AC_SL1000_.jpg" 
                         rating={4} 
                     />
-                    
                     <Product
                         id="FBvlg4Bl" 
                         title="Fitbit Versa Lite Edition Smart Watch, One Size (S and L Bands Included)" 
@@ -54,9 +53,9 @@ function Home() {
                     <Product
                         id="" 
                         title="Samsung LC49RG90SSUXEN 49inch Curved LED Gaming Monitor" 
-                        price={199.99} 
+                        price={1094.989} 
                         image="https://images-na.ssl-images-amazon.com/images/I/61Hh-0F7AbL._AC_SL1000_.jpg" 
-                        rating={3} 
+                        rating={4} 
                     />
                 </div>
             </div>
