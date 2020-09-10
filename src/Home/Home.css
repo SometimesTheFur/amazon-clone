@@ -1,7 +1,9 @@
 .home {
     display: flex;
-    object-fit: contain;
-    margin: 0;
+    justify-content: center;
+    margin-right: auto;
+    margin-left: auto;
+    max-width: 1500px;
 }
 .home__container {
 
@@ -15,5 +17,8 @@
 }
 
 .home__row {
-    display: inline;
+    display: flex;
+    z-index: 1;
+    margin-left: 5px;
+    margin-right: 5px;
 }
