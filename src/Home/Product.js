@@ -1,11 +1,12 @@
 import React from 'react'
 import './Product.css'
-import {useStateValue} from './StateProvider';
+import {useStateValue} from '../StateProvider';
 
 function Product({id, title, image, price, rating}) {
     
-    const [state, dispatch] = useStateValue();
-
+    
+    const [{cart}, dispatch] = useStateValue();
+        console.log('this is the cart >>>', cart);
     const addToCart = () => {
         //dispatch item into the data layer
         dispatch({
