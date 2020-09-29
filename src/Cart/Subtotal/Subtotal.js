@@ -6,14 +6,6 @@ import { getCartTotal } from '../../reducer';
 
 function Subtotal() {
     const [{cart}, dispatch] = useStateValue();
-    // let priceSum = 0;
-    // const addTotal = () => {
-    //     if({price} = "" || NaN)
-    //         return priceSum ;
-    //     else (priceSum = {price} + {price})
-    //         return priceSum;
-    // }
-    // console.log("addTotal>>>", addTotal);
 
     return (
         <div className='subtotal'>
@@ -30,7 +22,6 @@ function Subtotal() {
                     </>
                 )}
                 decimalScale={2}
-                value={0}
                 value={getCartTotal(cart)}
                 displayType={"text"}
                 thousandSeperator={true}

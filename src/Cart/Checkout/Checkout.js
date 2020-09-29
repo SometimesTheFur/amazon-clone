@@ -1,26 +1,37 @@
 import React from 'react'
 import "./Checkout.css"
 import Subtotal from '../Subtotal/Subtotal'
+import CheckoutProd from './CheckoutProd'
+import { useStateValue } from '../../StateProvider'
 
 function Checkout() {
+    const [{cart}, dispatch] = useStateValue();
+
     return (
         <div className='checkout'>
             <div className='checkout__left'>
                 <img
                     className='checkout__ad'
-                    src="https://www.outdoored.com/sites/default/files/images/events/WRMC_2020_Banner%20and%20logos%20for%20email.jpg"
-                    alt=""
+                    src="https://media.wizards.com/2020/images/magic/znr/release/en_pBjFlyI.jpg"
+                    alt="Magic The Gathering 2021 Product Lineup"
+                    href="https://magic.wizards.com/en/products?source=MX_Nav2020"
                 />
 
                 <div>
                     <h2 className='checkout__title'>
                         Your Shopping Cart
                     </h2>
-                    {/* CartItem */}
-                    {/* CartItem */}
-                    {/* CartItem */}
-                    {/* CartItem */}
-                    {/* CartItem */}
+
+                    {cart.map(item => (
+                        <CheckoutProd
+                            id={item.id}
+                            title={item.title}
+                            image={item.image}
+                            price={item.price}
+                            rating={item.rating} 
+                        />
+                    ))}
+                   
                 </div>
             </div>
                
