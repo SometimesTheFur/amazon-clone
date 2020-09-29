@@ -14,5 +14,6 @@ const reducer = (state, action) => {
             return state;
     }
 };
-
+export const getCartTotal = (cart) =>
+    cart?.reduce((amount, item) => item.price + amount, 0);
 export default reducer;
