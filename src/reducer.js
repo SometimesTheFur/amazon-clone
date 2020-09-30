@@ -1,5 +1,6 @@
 export const initialState = {
     cart: [],
+    user: null
 }
 
 export const getCartTotal = (cart) =>
@@ -26,13 +27,17 @@ const reducer = (state, action) => {
                     `Can't remove product (id: ${action.id}) as it's not in the cart!`
                 )
             }
-
             return {
                 ...state,
                 cart: newCart
             }
-            default:
-                return state;
+        case 'SET_USER':
+            return {
+                ...state,
+                user: action.user
+            }
+        default:
+            return state;
     }
 };
 

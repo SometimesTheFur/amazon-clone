@@ -6,7 +6,7 @@ function Product({id, title, image, price, rating}) {
     
     
     const [{cart}, dispatch] = useStateValue();
-        console.log('this is the cart >>>', cart);
+        // console.log('this is the cart >>>', cart);
     const addToCart = () => {
         //dispatch item into the data layer
         dispatch({
