@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { useStateValue } from '../../StateProvider';
 import CheckoutProd from '../Checkout/CheckoutProd';
 import './Payment.css';
@@ -9,6 +10,12 @@ function Payment() {
     return (
         <div className='payment'>
             <div className='payment__container'>
+                <h1>
+                    Checkout (
+                        <Link to="/checkout">{cart?.length} items</Link>
+                    )
+                </h1>
+
                 <div className='payment__section'>
                     <div className='payment__title'>
                         <h3>Delivery Address</h3>
