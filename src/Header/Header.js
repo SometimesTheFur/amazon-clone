@@ -4,7 +4,7 @@ import SearchIcon from '@material-ui/icons/Search';
 import ShoppingCartOutlinedIcon from '@material-ui/icons/ShoppingCartOutlined';
 import {Link} from 'react-router-dom';
 import { useStateValue } from '../StateProvider';
-
+//Yo! I'm Geoff Beetoes!
 function Header() {
     const [{cart}, dispatch] = useStateValue();
 
@@ -13,17 +13,18 @@ function Header() {
             <Link to="/">
               <img className='header__logo' src='http://pngimg.com/uploads/amazon/amazon_PNG11.png'/>  
             </Link>
-            
-            <div className='header__search'>
-                <input className='header__searchInput' type='text' />
+            <div className='header__search'> 
+                <input className='header__searchInput' type='text' /> 
                 <SearchIcon className='header__searchIcon' />
             </div>
 
             <div className='header__nav'>
-                <div className='header__option'>
-                    <span className='header__optionLineOne'>Hello, Guest</span>
-                    <span className='header__lineTwo'> Sign In</span>
-                </div>
+                <Link to='/login'>
+                    <div className='header__option'>
+                        <span className='header__optionLineOne'>Hello, Guest</span>
+                        <span className='header__lineTwo'> Sign In</span>
+                    </div>
+                </Link>
 
                 <div className='header__option'>
                     <span className='header__optionLineOne'>Returns</span>
