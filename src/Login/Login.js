@@ -3,6 +3,12 @@ import './Login.css';
 import {Link} from "react-router-dom";
 
 function Login() {
+    const [email, setEmail] = useStae('');
+    const [password, setPassword] = useStae('');
+    const signIn = e => {
+        e.preventDefault()
+    } 
+
     return (
         <div className='login'>
             <Link to='/'>
@@ -16,13 +22,18 @@ function Login() {
                 <h1>Sign-In</h1>
                 
                 <form>
-                   <h5>E-Mail</h5>
-                   <input type='text' />
+                    <h5>E-Mail</h5>
+                    <input type='text' value={email} 
+                        onChange={e => setEmail(e.target.value)} 
+                    />
 
-                   <h5>Password</h5>
-                   <input type='password' />
+                    <h5>Password</h5>
+                    <input type='password' value={password}
+                        onChange={e => setPassword(e.target.value)}  
+                    />
 
-                   <button className='login__signInButton'>Sign In</button>
+                    <button type='submit' onClick={signIn}
+                        className='login__signInButton'>Sign In</button>
                 </form>
                 <p>
                     By signing in, you agree to AMAZON FAKE CLONE Conditions of Use & Sale. 
