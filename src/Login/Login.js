@@ -6,8 +6,11 @@ function Login() {
     const [email, setEmail] = useStae('');
     const [password, setPassword] = useStae('');
     const signIn = e => {
-        e.preventDefault()
+        e.preventDefault();
     } 
+    const register = e => {
+        e.preventDefault();
+    }
 
     return (
         <div className='login'>
@@ -40,7 +43,8 @@ function Login() {
                     Please see our Privacy Notice, our Cookies Notice,
                     and our Interest-Based Ads Notice.
                 </p>
-                <button className='login__registerButton'>
+                <button onClick={register}
+                    className='login__registerButton'>
                     Create your Amazon Account
                 </button>
             </div>
