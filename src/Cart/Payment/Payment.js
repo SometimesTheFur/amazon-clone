@@ -1,15 +1,16 @@
 import { useElements, useStripe, CardElement } from '@stripe/react-stripe-js';
-import React, { useState } from 'react';
-import { Link } from 'react-router-dom';
+import React, { useState, useEffect } from 'react';
+import { Link, useHistory } from 'react-router-dom';
 import { useStateValue } from '../../StateProvider';
 import CheckoutProd from '../Checkout/CheckoutProd';
 import './Payment.css';
 import CurrencyFormat from 'react-currency-format';
 import {getCartTotal} from '../../reducer';
-import Axios from 'axios';
+import axios from './axios';
 
 function Payment() {
     const [{cart, user}, dispatch] = useStateValue();
+    const history = useHistory(); 
 
     const stripe = useStripe();
     const elements = useElements();
@@ -22,7 +23,7 @@ function Payment() {
     
     useEffect(() => {
         const getClientSecret = async () => {
-            const response = await Axios({
+            const response = await axios({
                 method: 'post',
                 url: `/payments/create?total=${getCartTotal(cart) * 100}`
             });
