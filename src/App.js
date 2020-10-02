@@ -36,7 +36,7 @@ function App() {
   }, [])
   
   return (
-    //BEM Convention
+
     <Router>
       <div className="App">
         <Switch>
