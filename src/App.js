@@ -11,7 +11,7 @@ import Payment from './Cart/Payment/Payment';
 import {loadStripe} from '@stripe/stripe-js';
 import {Elements} from '@stripe/react-stripe-js';
 
-const promise = loadStripe('pk_test_51HXp0tA14IjnxybvQSh2mkcixIdCwMyZ4LrHfo29zQrPzV9kLU2drj9dVoflnkRnG8q4WlYpeZX3J9PMTupFtDg0004jB9F98X');
+const promise = loadStripe('pk_live_51HXp0tA14IjnxybvfUBrxqtfCJhEywtRAtYOgwwm2LfTv3IENMAqvIb3mhhbrQKJKL9BZ2AcBrEcxhjYdPHEmKsx00ocEszcvb');
 
 function App() {
   const [{}, dispatch] = useStateValue();
